@@ -22,6 +22,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddSwaggerGen(s =>
 {
     s.SwaggerDoc("v1", new OpenApiInfo { Title = "Product", Version = "v1", Description="API Description" });
+     var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+     var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+     s.IncludeXmlComments(xmlPath);
 });
 var modelBuilder = new ODataConventionModelBuilder();
 
