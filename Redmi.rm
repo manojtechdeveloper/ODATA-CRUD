@@ -1,5 +1,5 @@
 
-#Project Description
+# Project Description
 
 Our .NET Core CRUD project utilizes Entity Framework with SQL Server to manage data persistence efficiently. 
 Employing the generic repository pattern ensures streamlined data access and maintenance. 
